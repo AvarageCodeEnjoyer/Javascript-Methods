@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Is string a palindrome</h1>
+    <h1>Is string a palindrome, "racecar"</h1>
     <div id="output"></div>
     
     <script>
@@ -16,7 +16,9 @@
             if (reversed.toLowerCase() === input.toLowerCase()) return true
             return false
         }
-        console.log(palindrome("racecard"))
+
+        output.innerText = palindrome("racecar") 
+        console.log(palindrome("racecar"))
     </script>
 </body>
 </html>

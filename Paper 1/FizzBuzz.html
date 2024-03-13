@@ -6,22 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="runLoop()">Run Function</button>
-    <h1 id="output"></h1>
+    <h1>Check Console </h1>
+    <div id="output"></div>
     <script>
         const output = document.getElementById("output")
 
         function runLoop() {
             for (i = 1; i <= 100; i++) {
-                console.log(i)
                 if (!(i % 3) && !(i % 5)) {
                     console.log("FizzBuzz")
-                    break
+                    continue
                 }
-                if (!(i % 3)) console.log("Fizz")
-                if (!(i % 5)) console.log("Buzz")
+                else if (!(i % 3)) console.log("Fizz")
+                else if (!(i % 5)) console.log("Buzz")
+                else console.log(i)                
+
             }
         }
+
+        output.innerText = runLoop()    
+        console.log(runLoop())
 
         // Much better version that replaces the console log for the number
         /* 

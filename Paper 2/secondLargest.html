@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Second Largest Number is array, [1,2,3,4,5,5,6,7,7,7]</h1>
+    <div id="output"></div>
+    <script>
+        const output = document.getElementById("output")
+
+        function secondLargest(arr) {
+            arr.sort((a, b) => a - b)
+            const noDuplicates = Array.from(new Set([...arr]))
+            return noDuplicates[noDuplicates.length - 2]
+        }
+        output.innerText = secondLargest([1,2,3,4,5,5,6,7,7,7])
+        console.log(secondLargest([1,2,3,4,5,5,6,7,7,7]))
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Capitalize all words in sentence, "hello world, you look good"</h1>
+    <div id="output"></div>
+    <script>
+        const output = document.getElementById("output")
+
+        function capitalize(input) {
+            const words = input.split(" ")
+            const capitalized = words.map(word => {
+                return word.charAt(0).toUpperCase() + word.slice(1)
+            })            
+
+            return capitalized.join(" ")
+        } 
+
+        output.innerText = capitalize("hello world, you look good") 
+        console.log(capitalize("hello world, you look good"))
+    </script>
+</body>
+</html>

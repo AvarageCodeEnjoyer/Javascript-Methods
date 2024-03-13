@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Get the longest word in a sentence, "Hello world, how are you today?"</h1>
+    <div id="output"></div>
+    <script>
+        const output = document.getElementById("output")
+
+        function stringLength(input) {
+            const words = input.trim().split(" ")
+            let longest = ""
+            words.forEach(word => {
+                if (word.length > longest.length) longest = word
+            })
+
+            return longest
+        }
+
+        output.innerText = stringLength("Hello world, how are you today?")
+
+        console.log(stringLength("Hello world, how are you today?"))
+    </script>
+</body>
+</html>
